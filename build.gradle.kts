@@ -164,6 +164,10 @@ dependencies {
 //    implementation("org.jsoup:jsoup:1.12.2")
 //    implementation("com.google.code.gson:gson:2.8.6")
 
+    implementation("net.compartmental.code:minim:2.2.2") {
+        exclude(group = "org.apache.maven.plugins", module = "maven-javadoc-plugin")
+    }
+
     runtimeOnly(openrndr("gl3"))
     runtimeOnly(openrndrNatives("gl3"))
     implementation(openrndr("openal"))
